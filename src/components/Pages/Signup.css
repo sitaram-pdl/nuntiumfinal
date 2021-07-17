@@ -1,0 +1,56 @@
+.Login-component {
+  height: 100vh;
+  background-image: url(../../images/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  align-items: "center";
+  justify-content: "space-around";
+  padding-left: 35%;
+}
+.headercontainer {
+  width: 100%;
+
+  display: flex;
+  background-color: #16181a;
+  margin-bottom: 5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.404);
+}
+.headerleft {
+  width: 80%;
+  margin-left: 1em;
+  background-color: #16181a;
+  color: rgba(250, 249, 249, 0.719);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0.5em 1em;
+  padding: 0.3em 1em;
+}
+.headerright {
+  color: rgb(247, 241, 241);
+  width: 12%;
+  text-align: right;
+}
+/*  
+
+
+
+  background-position: center center; 
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction:'row';
+  align-items: 'center';
+  justify-content: 'space-around';
+  padding-left: 35%;
+  margin-bottom: -10;
+
+
+
+ <h1>This is editor page.</h1>
+                <Button onClick={this.logoutButtonFunction } >Logoihj again</Button>
+         
+
+*/

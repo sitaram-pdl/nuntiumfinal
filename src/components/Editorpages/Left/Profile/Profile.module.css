@@ -1,0 +1,39 @@
+.container {
+  height: 50vh;
+  background-color: #16181a;
+  border-radius: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.144);
+}
+
+.profileimage {
+  width: 50%;
+  background-color: #fdfdfd44;
+  border-radius: 220px;
+  height: 50%;
+  margin: 4em 0 0 25%;
+}
+.profilecontain {
+  margin: 2em 10% 0 10%;
+  padding: 1em 5%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  overflow: hidden;
+
+  /* or 18px */
+
+  /* Text/Light */
+  color: #abbbc2;
+  border: 1px solid rgba(255, 255, 255, 0.048);
+}
+.images {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  border-radius: 80%;
+  margin: 5%;
+}
+
+.upload {
+  color: white;
+}

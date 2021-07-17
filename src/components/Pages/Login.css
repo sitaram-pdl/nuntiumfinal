@@ -1,0 +1,38 @@
+.Login-component {
+ 
+  height: 100vh;
+   background-image: url(../../images/1.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+ display: flex;
+
+  align-items: 'center';
+  justify-content: 'space-around';
+  padding-left: 35%;
+  
+
+ 
+
+}
+/*  
+
+
+
+  background-position: center center; 
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction:'row';
+  align-items: 'center';
+  justify-content: 'space-around';
+  padding-left: 35%;
+  margin-bottom: -10;
+
+
+
+ <h1>This is editor page.</h1>
+                <Button onClick={this.logoutButtonFunction } >Logoihj again</Button>
+         
+
+*/

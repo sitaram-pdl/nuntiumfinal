@@ -1,0 +1,29 @@
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #e5ebf1 !important;
+  text-shadow: 0 0 0.25px currentColor;
+}
+.ant-tabs-nav-wrap {
+  margin-left: 3em !important;
+  font-weight: 700 !important;
+  font-size: 0px !important;
+  line-height: 130% !important;
+  overflow: hidden !important;
+  color: #abbbc2 !important;
+  background-color: #16181a !important;
+  border: 1px solid rgba(255, 255, 255, 0.322) !important;
+  border-radius: 10px !important;
+}
+.ant-tabs-nav::before {
+  border-bottom: 1px solid rgba(95, 158, 160, 0) !important;
+}
+.ant-tabs-ink-bar {
+  position: absolute;
+  background-color: #abbbc200 !important;
+  pointer-events: none;
+}
+.ant-tabs-tab {
+  font-weight: 400 !important;
+  font-size: 24px !important;
+  padding: 1em 0 1em 0 !important;
+  margin-left: 1em !important;
+}

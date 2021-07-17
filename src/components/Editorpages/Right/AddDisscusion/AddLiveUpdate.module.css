@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+.formcontain {
+  width: 64%;
+  background-color: #16181a;
+  height: 70vh;
+  border: 1px solid rgba(240, 238, 236, 0.479);
+  border-radius: 20px;
+  margin-right: 2%;
+  padding: 2em 2em 2em 2em;
+  color: aliceblue;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+.listcontain {
+  width: 34%;
+  background-color: #16181a;
+  height: 70vh;
+  border: 1px solid rgba(240, 238, 236, 0.479);
+  border-radius: 20px;
+  color: rgb(24, 94, 155);
+  padding: 1em 1em 1em 1em;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+.header1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 42px;
+  -webkit-letter-spacing: 0.2px;
+  -moz-letter-spacing: 0.2px;
+  -ms-letter-spacing: 0.2px;
+  letter-spacing: 0.2px;
+  color: #dddddd;
+  opacity: 0.99;
+  margin-top: 0.5em;
+}
+.header {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 42px;
+  -webkit-letter-spacing: 0.2px;
+  -moz-letter-spacing: 0.2px;
+  -ms-letter-spacing: 0.2px;
+  letter-spacing: 0.2px;
+  color: #dddddd;
+  opacity: 0.99;
+  margin-top: 1.5em;
+}
+.input1::-webkit-input-placeholder {
+  font-size: 20px;
+  color: rgba(151, 137, 137, 0.466);
+  text-align: left;
+}
+.input1 {
+  width: 30rem;
+  font-size: 18px;
+  color: white;
+  border-color: white;
+  background-color: #16181a;
+  outline: black;
+  border: none;
+  margin-inline: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+  width: 90%;
+  margin-top: 1em;
+}
+.textarea1 {
+  width: 90%;
+  font-size: 18px;
+  color: white;
+  border-color: white;
+  background-color: #16181a;
+  outline: black;
+  border: none;
+  margin-inline: 2rem;
+  border-bottom: 1px solid grey;
+}
+.select {
+  width: 88%;
+  font-size: 18px;
+  color: white;
+
+  background-color: #16181a;
+  outline: black;
+  border: none !important;
+  margin-inline: 2rem;
+  border-bottom: 1px solid grey;
+}
+.selectborder {
+  border: 1px solid rgba(179, 177, 177, 0.575);
+  padding: 0.3em 0.2em;
+  width: 50%;
+  border-radius: 10px;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+.buttoncontainer {
+  width: 10%;
+  margin-left: 40em;
+  margin-top: 2em;
+}
