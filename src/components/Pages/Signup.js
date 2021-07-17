@@ -47,17 +47,14 @@ export default class Login extends Component {
     });
   }
   formSubmit = (e) => {
-    e.preventDefault();
     let formData = new FormData();
     formData.append("name", this.state.name);
     formData.append("email", this.state.email);
-    formData.append("category", this.state.password);
-    formData.append("password", this.state.phone);
+    formData.append("password", this.state.password);
+    formData.append("phone", this.state.phone);
     formData.append("address", this.state.address);
+    formData.append("writerPhoto", this.state.writerPhoto);
     formData.append("bio", this.state.bio);
-
-    formData.append("_id", localStorage.getItem("_id"));
-    formData.append("newsPhoto", this.state.writerPhoto);
     fetch("https://nuntium.blazeclothing.store/api/writer/register", {
       method: "POST",
       body: formData,
@@ -69,8 +66,8 @@ export default class Login extends Component {
       .catch((error) => console.log(error));
     this.setState({ disabled: true });
     notification.open({
-      message: "Registerd sucessfully",
-      description: "News has been successfully added",
+      message: "User Registered successfully",
+      description: "Now You can add news",
     });
   };
 
@@ -165,7 +162,7 @@ export default class Login extends Component {
                     <Form.Input
                       icon="user"
                       iconPosition="left"
-                      placeholder="Username"
+                      placeholder=" Email"
                       type="email"
                       name="email"
                       style={{ marginTop: "5px" }}
@@ -190,7 +187,7 @@ export default class Login extends Component {
                     <Form.Input
                       icon="lock"
                       iconPosition="left"
-                      type="password"
+                      type="text"
                       style={{ marginTop: "5px" }}
                       name="password"
                       placeholder="Password"
@@ -213,7 +210,7 @@ export default class Login extends Component {
                     <Form.Input
                       icon="lock"
                       iconPosition="left"
-                      type="password"
+                      type="text"
                       style={{ marginTop: "5px" }}
                       name="repassword"
                       placeholder="Re-Password"
@@ -246,7 +243,7 @@ export default class Login extends Component {
                       type="number"
                       style={{ marginTop: "5px" }}
                       name="phone"
-                      placeholder="Re-Password"
+                      placeholder="Phone"
                       value={this.state.phone}
                       onChange={this.handler}
                     />
@@ -269,7 +266,7 @@ export default class Login extends Component {
                       type="text"
                       style={{ marginTop: "5px" }}
                       name="address"
-                      placeholder="address"
+                      placeholder="Address"
                       value={this.state.address}
                       onChange={this.handler}
                     />
@@ -293,7 +290,7 @@ export default class Login extends Component {
                       type="text"
                       style={{ marginTop: "5px" }}
                       name="bio"
-                      placeholder="Re-Password"
+                      placeholder="Bio"
                       value={this.state.bio}
                       onChange={this.handler}
                     />
@@ -319,18 +316,19 @@ export default class Login extends Component {
                     style={{ maxWidth: "20vh", marginTop: "1em" }}
                     src={this.state.newsPhoto1}
                   />
-
-                  <Button
-                    negative
-                    onClick={this.formSubmit}
-                    style={{
-                      marginTop: "20px",
-                      marginLeft: "70%",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    Submit
-                  </Button>
+                  <Link to="/">
+                    <Button
+                      negative
+                      onClick={this.formSubmit}
+                      style={{
+                        marginTop: "20px",
+                        marginLeft: "70%",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      Submit
+                    </Button>
+                  </Link>
                 </Form>
               </div>
               <div style={{ marginTop: "20px" }}>

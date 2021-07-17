@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styles from "./AddLiveUpdate.module.css";
 import List from "./List";
+import { notification, Tooltip } from "antd";
+import "antd/dist/antd.css";
 
 import Textarea from "react-textarea-autosize";
 import { Button, Form, Checkbox, Radio } from "semantic-ui-react";
@@ -67,8 +69,10 @@ export default class AddLiveUpdate extends Component {
   view(item) {
     alert(
       `
-                Name = ${item.name}
-                Tel = ${item.tel}
+      Category = ${item.category}
+      Headline = ${item.headline}
+     Sub headline = ${item.headline}
+     Opinion=${item.Opinion}
                 `
     );
   }
@@ -123,6 +127,14 @@ export default class AddLiveUpdate extends Component {
 
       .catch(console.log);
     this.setState({ disabled: true });
+    notification.open({
+      message: "News have been succesfully Added",
+      description: "",
+      onClick: () => {
+        console.log("Notification Clicked!");
+        window.location.reload();
+      },
+    });
   }
 
   edit(index) {
@@ -162,6 +174,14 @@ export default class AddLiveUpdate extends Component {
       })
 
       .catch(console.log);
+    notification.open({
+      message: "News have been succesfully Updated",
+      description: "",
+      onClick: () => {
+        console.log("Notification Clicked!");
+        window.location.reload();
+      },
+    });
   }
 
   delete(index) {
@@ -187,6 +207,14 @@ export default class AddLiveUpdate extends Component {
       .catch(console.log);
     this.setState({ dir: dir });
     console.log(this.state.dir.item._id);
+    notification.open({
+      message: "News have been succesfully deleted",
+      description: "",
+      onClick: () => {
+        console.log("Notification Clicked!");
+        window.location.reload();
+      },
+    });
   }
 
   render() {

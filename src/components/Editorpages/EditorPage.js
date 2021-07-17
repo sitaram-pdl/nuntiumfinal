@@ -116,7 +116,7 @@ export default class Logout extends Component {
         </div>
         <Modal show={this.state.show} onHide={this.handleCloselogoutmodal}>
           <Modal.Body>
-            <h1 variant="dark">Logging out ?? </h1>
+            <h1 variant="dark">Do you wanna logout ? </h1>
           </Modal.Body>
           <Modal.Footer>
             <Link to="/">

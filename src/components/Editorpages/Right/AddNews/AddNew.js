@@ -76,8 +76,13 @@ export default class AddDisscusionmain extends Component {
   view(item) {
     alert(
       `
-                Name = ${item.name}
-                Tel = ${item.tel}
+      
+      headline = ${item.headline}
+      article = ${item.article}
+               
+                category = ${item.category} 
+                keyword= ${item.keyword}
+               
                 `
     );
   }
@@ -111,6 +116,7 @@ export default class AddDisscusionmain extends Component {
     dir.push(this.state.item);
     this.setState({
       dir: dir,
+      newsPhoto1: "",
       item: {
         headline: "",
         article: "",
@@ -193,6 +199,10 @@ export default class AddDisscusionmain extends Component {
       })
 
       .catch(console.log);
+    notification.open({
+      message: "News Updated",
+      description: "News has been successfully updated",
+    });
   }
 
   delete(index) {
@@ -215,6 +225,10 @@ export default class AddDisscusionmain extends Component {
       .catch(console.log);
     this.setState({ dir: dir });
     this.setState({ dir: dir });
+    notification.open({
+      message: "News Deleted",
+      description: "News has been successfully Deleted",
+    });
   }
 
   handleInputImageChange(event) {
@@ -264,7 +278,7 @@ export default class AddDisscusionmain extends Component {
                 <Textarea
                   type="text"
                   name="article"
-                  placeholder="Enter News"
+                  placeholder="Enter article"
                   minRows={1}
                   value={this.state.item.article}
                   onChange={this.handleChange}
@@ -294,7 +308,7 @@ export default class AddDisscusionmain extends Component {
                   maxRows={4}
                   value={this.state.item.keyword}
                   onChange={this.handleChange}
-                  placeholder="Enter update info"
+                  placeholder="Enter keyword"
                   className={styles.input1}
                 />
               </div>

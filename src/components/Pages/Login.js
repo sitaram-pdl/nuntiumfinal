@@ -39,7 +39,7 @@ export default class Login extends Component {
   formSubmit = (e) => {
     e.preventDefault();
     // console.log("key");
-    const { username, password, v } = this.state;
+    const { username, password } = this.state;
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

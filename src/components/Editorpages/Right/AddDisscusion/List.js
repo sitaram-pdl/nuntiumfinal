@@ -1,38 +1,47 @@
 import React, { Component } from "react";
 import styles from "./List.module.css";
 import { BiNews } from "react-icons/bi";
+import { Tooltip } from "antd";
+import "antd/dist/antd.css";
 
 class List extends Component {
   render() {
+    let i = 0;
     return (
       <div className={styles.container}>
         {this.props.dir.map((item, index) => (
           <div key={index} className={styles.listcontainer}>
             <div className={styles.headline}>
-              <div style={{ marginRight: "0.5em", padding: "0 0 0 1em" }}></div>
-              <div>Headline: {item.headline}</div>
-              <div>Sub Headline: {item.subheadline}</div>
+              <div style={{ marginRight: "0.5em" }}></div>
+              <div>Headline:{item.headline}</div>
+              <div>Sub headline:{item.subheadline}</div>
             </div>
 
             <div className={styles.buttoncontain}>
-              <div
-                className={styles.button1}
-                onClick={(e) => this.props.view(item, e)}
-              >
-                View
-              </div>
-              <div
-                className={styles.button2}
-                onClick={(e) => this.props.edit(index, e)}
-              >
-                Edit
-              </div>
-              <div
-                className={styles.button3}
-                onClick={(e) => this.props.delete(index, e)}
-              >
-                Delete
-              </div>
+              <Tooltip placement="topLeft" title={"Click to view news"}>
+                <div
+                  className={styles.button1}
+                  onClick={(e) => this.props.view(item, e)}
+                >
+                  View
+                </div>
+              </Tooltip>
+              <Tooltip placement="topLeft" title={"Click to edit news"}>
+                <div
+                  className={styles.button2}
+                  onClick={(e) => this.props.edit(index, e)}
+                >
+                  Edit
+                </div>
+              </Tooltip>
+              <Tooltip placement="topLeft" title={"Click to delete news"}>
+                <div
+                  className={styles.button3}
+                  onClick={(e) => this.props.delete(index, e)}
+                >
+                  Delete
+                </div>
+              </Tooltip>
             </div>
           </div>
         ))}

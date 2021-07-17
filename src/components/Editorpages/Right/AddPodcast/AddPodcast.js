@@ -98,9 +98,8 @@ export default class AddDisscusionmain extends Component {
   }
   viewEpisode(index) {}
   add(e) {
-    e.preventDefault();
     let dir = this.state.dir;
-    dir.push(this.state.item);
+    // dir.push(this.state.item);
     this.setState({
       dir: dir,
       item: {
@@ -177,7 +176,7 @@ export default class AddDisscusionmain extends Component {
     formData.append("date", this.state.item.date);
     formData.append("description", this.state.item.episodeDescription);
     formData.append("guest", this.state.item.guest);
-
+    formData.append("_id", localStorage.getItem("_id"));
     formData.append("podcastEpisode", this.state.audioPath);
     fetch("https://nuntium.blazeclothing.store/api/episode/register", {
       method: "POST",
@@ -190,9 +189,9 @@ export default class AddDisscusionmain extends Component {
       .catch((error) => console.log(error));
     this.setState({ disabled: true });
     console.log(this.state.item.category);
-    console.log(this.state.item.name);
+    console.log(this.state.item.episodeName);
     console.log(this.state.item.date);
-    console.log(this.state.item.description);
+    console.log(this.state.item.episodeDescription);
     console.log(this.state.item.guest);
     console.log(this.state.item.audioPath);
     notification.open({
@@ -294,8 +293,8 @@ export default class AddDisscusionmain extends Component {
                 // other props here
               />
               <div className={styles.buttoncontainer}>
-                <Button negative type="submit">
-                  {this.state.isEditing ? "Save" : "Save"}
+                <Button negative type="submit " onclick={this.add}>
+                  {this.state.isEditing ? "Update" : "Save"}
                 </Button>
               </div>
             </form>
