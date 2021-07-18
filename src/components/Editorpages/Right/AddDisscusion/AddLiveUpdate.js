@@ -280,7 +280,7 @@ export default class AddLiveUpdate extends Component {
                 name="headline"
                 minRows={1}
                 maxRows={4}
-                placeholder="Enter disscussion topic"
+                placeholder="Enter Headline"
                 value={this.state.item.headline}
                 onChange={this.handleChange}
                 className={styles.input1}

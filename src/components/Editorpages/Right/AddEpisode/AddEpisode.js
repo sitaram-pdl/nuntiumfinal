@@ -97,7 +97,7 @@ export default class AddDisscusionmain extends Component {
     this.setState({ disabled: true });
   }
   viewEpisode(index) {}
-  add(e) {
+  add = (e) => {
     let dir = this.state.dir;
     // dir.push(this.state.item);
     this.setState({
@@ -141,7 +141,7 @@ export default class AddDisscusionmain extends Component {
       description: "New Podcast Added Sucessfully",
     });
     this.setState({ disabled: true });
-  }
+  };
 
   edit(index) {
     let item = this.state.dir[index];

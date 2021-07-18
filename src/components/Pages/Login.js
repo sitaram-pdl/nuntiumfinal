@@ -56,6 +56,7 @@ export default class Login extends Component {
         localStorage.setItem("_id", data._id);
         localStorage.setItem("writerName", data.name);
         localStorage.setItem("writerPhoto", data.photoPath);
+        localStorage.setItem("writerAddress", data.address);
         localStorage.setItem("writerBio", data.bio);
 
         this.setState({

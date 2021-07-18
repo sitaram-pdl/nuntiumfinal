@@ -48,6 +48,7 @@ export default class Profile extends Component {
         <div className={styles.upload}></div>
         <div className={styles.profilecontain}>
           <div>Name : {localStorage.getItem("writerName")}</div>
+          <div>Id : {localStorage.getItem("_id")}</div>
         </div>
       </div>
     );
